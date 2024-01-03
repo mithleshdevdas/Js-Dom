@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(26, 28, 28); color: aliceblue;">
+    <div class="lang">
+        <li>javascript</li>
+    </div>
+</body>
+<script>
+    // function addlang(langname){
+    //     const li =document.createElement('li')
+    //     li.innerHTML=`${langname}`
+    //     document.querySelector('.lang').appendChild(li)
+    // }
+    // addlang("java")
+    // addlang("pyathon")
+
+    const addoptilang =(langname)=>{
+const li = document.createElement('li')
+li.appendChild(document.createTextNode(langname))
+document.querySelector('.lang').appendChild(li)
+    }
+addoptilang('python')
+addoptilang('java')
+addoptilang('java')
+
+// edit
+const seconglag = document.querySelector("li:nth-child(2)")
+console.log(seconglag);
+const newli = document.createElement('li')
+newli.textContent="mojo"
+seconglag.replaceWith(newli)
+
+
+// edit
+const firstlag =document.querySelector('li')
+const editli = document.createElement('li')
+editli.textContent="typescript"
+firstlag.replaceWith(editli)
+
+// edit
+const thirdli = document.querySelector('li:nth-child(3)')
+ thirdli.outerHTML= "<li>css</li>"
+
+// remove
+const lastlang =document.querySelector('li:last-child')
+lastlang.remove()
+
+</script>
+</html>
